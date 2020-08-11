@@ -20,6 +20,7 @@ body {
   list-style-type: none;
   padding-left: 20px;
   padding-right: 20px;
+  animation: an .5s linear;
 }
 .sidebar li {
   margin-top: 10px;
@@ -257,6 +258,58 @@ text-align: right;
   font-weight: 600;
   padding-top: 17px!important;
   padding-bottom: 17px!important;
+}
+.toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 500;
+  cursor: pointer;
+  display: none;
+}
+@keyframes an {
+  from {
+    /* opacity: 0; */
+    transform: scale(0)
+  } to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+@media(max-width: 600px){
+  .toggle {
+    display: flex;
+    background: #1da1f2;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 10px;
+
+  }
+  .App {
+   flex-direction: column;
+   width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    background:white;
+  }
+ 
+  .home {
+    display: none;
+  }
+  .searchBar {
+    margin-top: 100vh;
+  }
+  .twittes {
+    width: 100%;
+    margin-left: 0;
+  }
+  .right {
+    display: none;
+  }
 }
 
 
